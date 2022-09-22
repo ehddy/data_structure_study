@@ -1,0 +1,17 @@
+from avl import AVL
+if __name__ == '__main__':
+    t = AVL()
+    t.put(75, '')
+    t.put(80, '')
+    t.put(85, '')
+    t.put(20, '')
+    t.put(10, '')
+    t.put(50, '')
+    t.put(30, '')
+    t.put(40, '')
+    t.put(70, '')
+    t.put(90, '')
+    print('전위순회:\t', end='')
+    t.preorder(t.root)
+    print('\n중위순회:\t', end='')
+    t.inorder(t.root)

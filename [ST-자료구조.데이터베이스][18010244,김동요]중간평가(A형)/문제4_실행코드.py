@@ -1,0 +1,31 @@
+from 문제4_함수코드 import AVL
+if __name__ == '__main__':
+    t = AVL()
+    t.put(75, 'apple')
+    t.put(80, 'grape')
+    t.put(85, 'lime')
+    t.put(20, 'mango')                                                                                                      
+    t.put(10, 'strawberry')
+    t.put(50, 'banana')                                                                                             
+    t.put(30, 'cherry')                                                                                         
+    t.put(40, 'watermelon')                                                                                             
+    t.put(70, 'melon')                                                                                                                           
+    t.put(90, 'plum')
+    # 삭제하기 전 전위순회와 중위순회를 확인 
+    print('#1')
+    print('75와 85 삭제 전:')                                                     
+    print('전위순회:\t', end='')
+    t.preorder(t.root)                                                              
+    print('\n중위순회:\t', end='')
+    t.inorder(t.root)
+    print('\n')
+
+    # 삭제후의 전위순회와 중위순회를 확인         
+    print("#2")                                                                          
+    print('75와 85 삭제 후:')
+    t.delete(75)
+    t.delete(85)
+    print('전위순회:\t', end='')
+    t.preorder(t.root)
+    print('\n중위순회:\t', end='')
+    t.inorder(t.root)

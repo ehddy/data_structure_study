@@ -1,0 +1,23 @@
+from binary_heap_4_33 import BHeap
+if __name__ == '__main__':
+    a = [None] * 1
+    a.append(45)
+    a.append(80)
+    a.append(50)
+    a.append(70)
+    a.append(35)
+    a.append(40)
+    a.append(30)
+    a.append(20)
+    a.append(10)    
+    b = BHeap(a)
+    print('힙 만들기 전:')
+    b.print_heap()
+    print('힙 만든 후')
+    b.create_heap()
+    print('최소힙:')
+    b.print_heap()
+    print('최소값 삭제 후')
+    print(b.delete_min())
+    b.print_heap()
+    print('최솟값 20')
